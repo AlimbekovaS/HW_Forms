@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Формы</title>
+    <style>
+        /* Стили для более удобного отображения элементов формы */
+        form {
+            width: 31%;
+            /* Ширина формы 30% от ширины окна */
+        }
+
+        /* table,
+        td,
+        th {
+            border-spacing: 0;
+            border: 2px solid black;
+            border-collapse: collapse;
+
+
+        } */
+    </style>
+</head>
+<body>
+    <form action="request.php" method="POST" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <fieldset>
+                <legend>Контактные данные</legend>
+                <table>
+                    <tr>                  
+                        <td><label for="fio">ФИО</label></td>
+                        <td>
+                            <input type="text" id="fio" placeholder="ФИО" autofocus size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="90"> <label for="email">E-mail</label> </td>
+                        <td>
+                                <input type="text" id="email" placeholder="e-mail" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="pass" >Пароль</label> </td>
+                        <td>
+                         
+                                <input type="password" id="pass" >
+
+                        </td>
+                    </tr>
+                    <tr>
+                       <td> <label for="site">Адрес сайта</label>  </td> 
+                       <td> <input type="site" name="site" id="site" placeholder="http://" size="30"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Дополнительные данные</legend>
+               <table>
+                   <tr>
+                       <td>Пол</td>
+                    <td>
+                    <select name="gender" id="">
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                  
+                
+                    <td width="90">  О себе</td>
+                    <td><textarea name="" id="" cols="32" rows="3" placeholder="Напишите о себе"></textarea></td>
+                </tr></table>
+            </fieldset>
+            <fieldset>
+                <legend>Предпочтения в литературе</legend>
+                <input type="checkbox" name="checkbox[]"> Классическая литература <br> 
+                <input type="checkbox" name="checkbox[]"> Научная фантастика <br>
+                <input type="checkbox" name="checkbox[]"> Детективы
+            </fieldset>
+            <fieldset>
+                <legend>Согласны ли Вы с правилами сайта?</legend>
+                <input type="radio">Да <br>
+                <input type="radio">Нет
+            </fieldset>
+            <fieldset>
+                <legend>Отправка формы</legend>
+                <input type="submit" value="Зарегистироваться">
+                <input type="reset" value="Очистить форму">
+            </fieldset>
+
+
+        </fieldset>
+        
+
+
+    </form>
+</body>
+
+</html>
